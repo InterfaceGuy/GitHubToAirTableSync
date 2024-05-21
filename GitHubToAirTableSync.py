@@ -33,8 +33,8 @@ existing_repo_urls = set(record['fields'].get('Repository URL', '') for record i
 
 # Define the Reviewer collaborator object
 reviewer_collaborator = {
-    'email': 'zak@civilizationresearch.org',
-    'name': 'Zak Stein'
+    'email': os.environ.get('REVIEWER_EMAIL')
+    'name': os.environ.get('REVIEWER_NAME')
 }
 
 # Iterate over the remote links
